@@ -12,7 +12,7 @@ Production-ready enterprise web application for **Enginuvity Nexus Technologies*
 - **Containerization:** Docker & Docker Compose (isolated container per application)
 - **Web Server & Reverse Proxy:** Nginx (Host reverse proxy with security headers, Gzip, and SSL readiness)
 - **CI/CD:** GitHub Actions automated build, test, and zero-downtime VPS deployment
-- **Hosting / Infrastructure:** OVH Cloud VPS (`57.129.174.71`) hardened with UFW, Fail2ban, and SSH key policies
+- **Hosting / Infrastructure:** OVH Cloud VPS hardened with UFW, Fail2ban, and SSH key policies
 
 ---
 
@@ -22,7 +22,7 @@ Production-ready enterprise web application for **Enginuvity Nexus Technologies*
 .
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml            # CI/CD pipeline deploying to OVH VPS
+│       └── deploy.yml            # CI/CD pipeline deploying to VPS
 ├── Ent.Web/                      # ASP.NET Core Web Application
 │   ├── Data/                     # EF Core DbContext & Database Seeder
 │   ├── Models/                   # Domain & Identity models
@@ -85,28 +85,28 @@ This repository is configured with an automated **GitHub Actions CI/CD pipeline*
 2. **Build & Validate Job:**
    - Sets up .NET 9 SDK and Node.js.
    - Installs dependencies, compiles Tailwind CSS assets, and validates the build.
-3. **Deploy to OVH VPS Job:**
-   - Connects securely to the VPS (`57.129.174.71`) via SSH using the `myent` user.
-   - Syncs code to `/home/myent/apps/ent_web_live/`.
+3. **Deploy to VPS Job:**
+   - Connects securely to the VPS via SSH.
+   - Syncs code to the application workspace directory.
    - Rebuilds and launches the Docker container (`ent_web_live`).
-   - Runs automated HTTP health checks against `http://127.0.0.1:5000/healthz`.
+   - Runs automated HTTP health checks against the local endpoint.
 
 ### Required GitHub Repository Secrets
 Configured in `Settings -> Secrets and variables -> Actions`:
 
-| Secret Name | Value / Purpose |
+| Secret Name | Purpose |
 | :--- | :--- |
-| `VPS_HOST` | `57.129.174.71` |
-| `VPS_USERNAME` | `myent` |
-| `VPS_SSH_KEY` | Dedicated OpenSSH Ed25519 Private Key for CI/CD |
+| `VPS_HOST` | Production VPS IP address or domain |
+| `VPS_USERNAME` | Deployment user account |
+| `VPS_SSH_KEY` | Dedicated OpenSSH Private Key for CI/CD |
 
 ---
 
 ## 🛡️ VPS Hardening & Security Architecture
 
-The host server (`57.129.174.71`) is hardened according to CIS Benchmark and NIST standards:
-- **Dedicated User:** `myent` (Sole non-root administrative and deployment account).
-- **SSH Hardening:** Direct `root` login disabled (`PermitRootLogin no`); login whitelisted to `myent` only.
+The host server is hardened according to CIS Benchmark and NIST standards:
+- **Dedicated User:** Non-root administrative and deployment account.
+- **SSH Hardening:** Direct `root` login disabled (`PermitRootLogin no`); login whitelisted to authorized deploy user only.
 - **Firewall (UFW):** Strict stateful default-deny policy; only ports `22` (SSH), `80` (HTTP), and `443` (HTTPS) allowed.
 - **Intrusion Defense (Fail2ban):** Active SSH jail automatically banning brute-force attempts.
 - **Docker Log Rotation:** Container logs capped at `50MB` with `3` rolling archives in `/etc/docker/daemon.json` to prevent disk exhaustion.
