@@ -1,0 +1,40 @@
+@page "{id:int}"
+@model Ent.Web.Pages.Blog.PostModel
+@{
+    ViewData["Title"] = Model.BlogPost?.Title ?? "Post Not Found";
+}
+
+@if (Model.BlogPost == null)
+{
+    <div class="bg-white py-24 sm:py-32 min-h-[60vh] flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl">Insight Not Found</h1>
+            <p class="mt-6 text-base leading-7 text-slate-600 font-medium">Sorry, we couldn't find the article you're looking for.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a href="/Blog/Index" class="rounded-sm bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors">&larr; Back to Insights</a>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <article class="bg-white px-6 py-32 lg:px-8">
+        <div class="mx-auto max-w-3xl text-base leading-7 text-slate-600">
+            <div class="flex items-center gap-x-4 mb-8">
+                <time datetime="@Model.BlogPost.PublishedDate.ToString("yyyy-MM-dd")" class="text-sm leading-6 text-slate-500 font-medium">@Model.BlogPost.PublishedDate.ToString("MMMM dd, yyyy")</time>
+                <span class="text-slate-300">&bull;</span>
+                <span class="text-sm leading-6 text-slate-500 font-medium">@Model.BlogPost.AuthorName</span>
+            </div>
+            
+            <h1 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl mb-12">@Model.BlogPost.Title</h1>
+            
+            <div class="prose prose-slate prose-lg max-w-none text-slate-600">
+                @Html.Raw(Model.BlogPost.Content.Replace("\n", "<br/>"))
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-slate-100">
+                <a href="/Blog/Index" class="text-sm font-bold text-slate-900 hover:text-slate-600 transition-colors uppercase tracking-wider">&larr; Back to Insights</a>
+            </div>
+        </div>
+    </article>
+}

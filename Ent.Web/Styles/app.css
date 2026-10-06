@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  /* We can define custom theme vars here if needed */
+}
+
+@layer utilities {
+  .cursor-effect {
+    /* Custom cursor effect style hooks can go here if needed */
+  }
+}

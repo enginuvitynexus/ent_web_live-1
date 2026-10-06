@@ -1,0 +1,12 @@
+**/.git
+**/.github
+**/.gitignore
+**/.vs
+**/bin
+**/obj
+**/*.md
+**/node_modules
+**/cloud-run-*.yaml
+**/*.user
+**/*.suo
+**/GCP_SETUP_GUIDE.md

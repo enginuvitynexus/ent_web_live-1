@@ -1,0 +1,136 @@
+@page
+@model Ent.Web.Pages.Industries.MarineModel
+@{
+    ViewData["Title"] = "Marine & Offshore";
+}
+
+<div class="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <!-- Page Header -->
+    <div class="mx-auto max-w-2xl lg:text-center mb-16">
+      <span class="inline-block text-xs font-bold tracking-widest text-violet-600 uppercase mb-3
+                   px-3 py-1 rounded-full bg-violet-50 border border-violet-100">Industries</span>
+      <p class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Marine &amp; Offshore Engineering
+      </p>
+      <p class="mt-3 text-lg text-slate-400 font-light tracking-wide">
+        Hydrodynamic optimization, structural analysis of offshore assets, and decarbonization strategies
+      </p>
+      <p class="mt-8 text-base leading-8 text-slate-600 font-medium">
+        We provide advanced engineering solutions for maritime transport and offshore energy sectors, utilizing high-fidelity fluid dynamics (CFD) and structural analysis (FEA) to maximize efficiency, reduce emissions, and guarantee structural integrity under harsh ocean conditions.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <div class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3">
+
+        <!-- Card 1 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-violet-600"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 0a9.003 9.003 0 018.716 6.747M12 3a9.003 9.003 0 00-8.716 6.747" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-violet-600 transition-colors">Hydrodynamics &amp; Resistance</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              CFD analysis for hull resistance minimization, wave-making characteristics, and sea-keeping performance optimization in varied sea states.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-violet-600"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-violet-600 transition-colors">Hull Structure FEA</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Structural stress calculations, local panel buckling verifications, and slam loading FEA to ensure structural integrity and vessel lifetime durability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-violet-600"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.438 4.438 0 002.946-2.946 4.5 4.5 0 004.306-1.758q.225-.365.4-.757a14.91 14.91 0 00-2.146-2.146c-.285.13-.56.28-.822.449z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-violet-600 transition-colors">Propulsion &amp; Thrust</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Propeller blade design optimization, open-water thrust CFD simulations, cavitation assessments, and hybrid/electric vessel powertrain integration.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-violet-600"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v15m0-15a9.003 9.003 0 00-8.716 6.747M12 3a9.003 9.003 0 018.716 6.747M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-violet-600 transition-colors">Offshore Wind &amp; Platforms</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Mooring line tension analysis, floating foundation dynamics, and aerostructural simulations for offshore wind turbines and deep-water platforms.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-violet-600"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.047 8.287 8.287 0 009 9.6a8.25 8.25 0 016.362-4.386z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-violet-600 transition-colors">Decarbonization &amp; Green Shipping</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Energy saving devices (ESD) analysis, alternative fuel propulsion conversions (LNG, Ammonia, Hydrogen), and EEXI/CII rating optimization studies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-violet-600"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-violet-600 transition-colors">Marine Digital Twins</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Real-time hull fouling indicators, fuel consumption prediction models, and telemetry dashboards to support efficient route planning and vessel management.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-20 text-center">
+      <a href="/Contact?subject=Marine%20%26%20Offshore%20Inquiry" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors uppercase tracking-wide">
+        Start Your Project &rarr;
+      </a>
+    </div>
+
+  </div>
+</div>

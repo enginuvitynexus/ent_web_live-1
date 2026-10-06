@@ -1,0 +1,38 @@
+@page
+@model Ent.Web.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "_AdminLayout";
+}
+
+<div class="mb-8">
+    <h2 class="text-lg font-medium leading-6 text-gray-900">Overview</h2>
+    <div class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-3">
+        <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 border border-gray-100">
+            <dt class="truncate text-sm font-medium text-gray-500">Active Users</dt>
+            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">@Model.TotalUsers</dd>
+        </div>
+        <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 border border-gray-100">
+            <dt class="truncate text-sm font-medium text-gray-500">Published Blog Posts</dt>
+            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">@Model.TotalBlogs</dd>
+        </div>
+        <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 border border-gray-100">
+            <dt class="truncate text-sm font-medium text-gray-500">Active Job Listings</dt>
+            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">@Model.TotalCareers</dd>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white shadow sm:rounded-lg border border-gray-200">
+    <div class="px-4 py-5 sm:p-6">
+        <h3 class="text-base font-semibold leading-6 text-gray-900">System Telemetry</h3>
+        <div class="mt-2 max-w-xl text-sm text-gray-500">
+            <p>Welcome to the Enginuvity Nexus Technologies administration portal. Use the sidebar to manage users, content, and career postings.</p>
+        </div>
+        <div class="mt-5">
+            <a href="/Admin/Users" class="inline-flex items-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
+                Manage Users
+            </a>
+        </div>
+    </div>
+</div>

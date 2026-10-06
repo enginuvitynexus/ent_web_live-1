@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./Ent.Web
+      dockerfile: Dockerfile
+    container_name: ent_web_live
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=${DATABASE_URL:-}
+      - EmailSettings__SmtpPassword=${SMTP_PASSWORD:-}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/healthz || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - ent_net
+
+networks:
+  ent_net:
+    driver: bridge

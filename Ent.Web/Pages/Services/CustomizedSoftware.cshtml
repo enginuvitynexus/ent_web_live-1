@@ -1,0 +1,136 @@
+@page
+@model Ent.Web.Pages.Services.CustomizedSoftwareModel
+@{
+    ViewData["Title"] = "Customized Software Development";
+}
+
+<div class="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <!-- Page Header -->
+    <div class="mx-auto max-w-2xl lg:text-center mb-16">
+      <span class="inline-block text-xs font-bold tracking-widest text-cyan-600 uppercase mb-3
+                   px-3 py-1 rounded-full bg-cyan-50 border border-cyan-100">Services</span>
+      <p class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Customized Software
+      </p>
+      <p class="mt-3 text-lg text-slate-400 font-light tracking-wide">
+        Bespoke application development tailored to your exact business needs
+      </p>
+      <p class="mt-8 text-base leading-8 text-slate-600 font-medium">
+        We engineer bespoke software systems that streamline your operations and drive digital growth. From high-performance cloud applications to secure, cross-platform mobile apps, our developers follow modern dev practices to build scalable solutions.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <div class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3">
+
+        <!-- Card 1 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Full-Stack Web Applications</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Highly responsive web portals, custom admin consoles, React/Vue SPAs, and .NET Razor Pages architectures.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Cross-Platform Mobile Apps</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Native and hybrid mobile applications built on iOS and Android using Flutter, React Native, or .NET MAUI.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Cloud-Native Architectures</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Docker containerized workloads, Kubernetes clusters, serverless AWS Lambdas/Azure Functions, and multi-tenant databases.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">API-First Design</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Clean API contracts using OpenAPI specification, high-throughput GraphQL endpoints, and JSON/gRPC protocol interfaces.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622a4.5 4.5 0 01-1.242-7.244l4.5-4.5a4.5 4.5 0 016.364 6.364l-1.757 1.757" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Systems Integration</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Bridging legacy databases, ERP models (SAP, Oracle), CRM databases (Salesforce), and custom internal workflows.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">DevOps &amp; Automation</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              CI/CD automation pipelines using GitHub Actions, automated unit test pipelines, and secure cloud deployment pipelines.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-20 text-center">
+      <a href="/Contact?subject=Custom%20Software%20Inquiry" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors uppercase tracking-wide">
+        Start Your Project &rarr;
+      </a>
+    </div>
+
+  </div>
+</div>

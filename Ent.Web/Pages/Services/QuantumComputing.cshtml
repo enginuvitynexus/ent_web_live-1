@@ -1,0 +1,196 @@
+@page
+@model Ent.Web.Pages.Services.QuantumComputingModel
+@{
+    ViewData["Title"] = "Quantum Computing Services";
+}
+
+<div class="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <!-- Page Header -->
+    <div class="mx-auto max-w-2xl lg:text-center mb-16">
+      <span class="inline-block text-xs font-bold tracking-widest text-cyan-600 uppercase mb-3
+                   px-3 py-1 rounded-full bg-cyan-50 border border-cyan-100">Services</span>
+      <p class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Quantum Computing Services
+      </p>
+      <p class="mt-3 text-lg text-slate-400 font-light tracking-wide">
+        Harnessing quantum power for unprecedented computational capabilities
+      </p>
+      <p class="mt-8 text-base leading-8 text-slate-600 font-medium">
+        Unlock the potential of quantum computing with our specialized services in quantum algorithm development, optimization solutions, and quantum-classical hybrid systems. Solving complex problems that are intractable for classical computers.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <div class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3">
+
+        <!-- Card 1 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9m0 0a9.003 9.003 0 018.716 6.747M12 3a9.003 9.003 0 00-8.716 6.747" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Quantum Algorithm Development</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Custom quantum algorithms including VQE, QAOA, Grover's search, and quantum machine learning. Tailored to your specific optimization and computational needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Quantum Optimization</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Solving complex optimization problems in logistics, finance, drug discovery, and materials science using quantum annealing and variational quantum algorithms.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 21l8.904-4.43c.422-.21.72-.613.805-1.079l.995-5.46a1.65 1.65 0 00-.776-1.74l-5.69-3.23a1.65 1.65 0 00-1.666 0L5.58 8.324a1.65 1.65 0 00-.776 1.74l.996 5.46a1.144 1.144 0 00.804 1.08l3.209 1.6z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Quantum Simulation</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Molecular dynamics, chemical reactions, and materials properties simulation. Quantum advantage for computational chemistry and condensed matter physics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622a4.5 4.5 0 01-1.242-7.244l4.5-4.5a4.5 4.5 0 016.364 6.364l-1.757 1.757" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Hybrid Quantum-Classical Systems</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Integration of quantum and classical computing resources. Variational approaches, quantum-classical co-processing, and error mitigation strategies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 21l8.904-4.43c.422-.21.72-.613.805-1.079l.995-5.46a1.65 1.65 0 00-.776-1.74l-5.69-3.23a1.65 1.65 0 00-1.666 0L5.58 8.324a1.65 1.65 0 00-.776 1.74l.996 5.46a1.144 1.144 0 00.804 1.08l3.209 1.6z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Quantum Machine Learning</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Quantum neural networks, quantum kernels, and quantum-enhanced ML algorithms for pattern recognition, classification, and data analysis tasks.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l.707.707m2.808 9.905a3.5 3.5 0 115.385 0" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Quantum Consulting &amp; Training</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Strategic quantum roadmap development, feasibility studies, and professional training programs. Building quantum computing capabilities in your organization.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Quantum Computational Fluid Dynamics</h3>
+            <p class="text-slate-500 leading-relaxed text-sm mb-4">
+              Developing next-generation Quantum CFD algorithms to accelerate complex fluid flow simulations using practical quantum and hybrid quantum-classical approaches.
+            </p>
+            <button onclick="document.getElementById('qcfdModal').style.display='flex';" class="text-xs font-bold text-cyan-600 hover:text-cyan-800 flex items-center gap-1 transition-colors uppercase tracking-wider">
+              Read More &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-20 text-center flex justify-center gap-4">
+      <a href="/Contact?subject=Quantum%20Computing%20Services" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors uppercase tracking-wide">
+        Get Started &rarr;
+      </a>
+      <a href="/Academy/QuantumComputingCourses" class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 hover:text-slate-900 transition-colors uppercase tracking-wide">
+        Learn Quantum Computing
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     MODAL — Quantum CFD Detail (White Theme Styled)
+============================================================ -->
+<div id="qcfdModal" onclick="if(event.target===this)this.style.display='none'"
+     class="fixed inset-0 w-full h-full bg-slate-900/40 backdrop-blur-md z-[9999] hidden items-center justify-center p-4">
+  <div class="bg-white border border-slate-200 rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 relative shadow-2xl">
+    
+    <!-- Close button -->
+    <button onclick="document.getElementById('qcfdModal').style.display='none'"
+            class="absolute top-4 right-4 bg-transparent border-none text-slate-400 hover:text-slate-600 text-2xl cursor-pointer leading-none transition-colors">
+      &times;
+    </button>
+    
+    <div class="flex items-center gap-4 mb-6">
+      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 flex items-center justify-center">
+        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
+        </svg>
+      </div>
+      <h3 class="text-xl font-extrabold text-slate-900">Quantum Computational Fluid Dynamics (QCFD)</h3>
+    </div>
+    
+    <div class="text-slate-600 space-y-4 text-sm leading-relaxed font-medium">
+      <p>
+        At Enginuvity Nexus Technologies LLP, we are developing next-generation Quantum Computational Fluid Dynamics (Quantum CFD) algorithms designed to accelerate complex fluid flow simulations. Our work focuses on creating practical, ready-to-use quantum and hybrid quantum-classical algorithms that can be integrated with existing CFD and high-performance computing (HPC) platforms.
+      </p>
+      <p>
+        These algorithms aim to improve the efficiency of solving large fluid dynamics problems such as turbulence modeling, multiphysics simulations, and large-scale optimization in sectors including aerospace, naval engineering, energy, and defense.
+      </p>
+      <p>
+        Through our research, development, and ENT Academy programs, we are building a foundation for future quantum-enabled engineering simulation tools that will support faster design, analysis, and innovation.
+      </p>
+    </div>
+  </div>
+</div>

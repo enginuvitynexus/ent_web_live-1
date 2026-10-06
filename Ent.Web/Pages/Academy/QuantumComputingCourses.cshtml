@@ -1,0 +1,112 @@
+@page
+@model Ent.Web.Pages.Academy.QuantumComputingCoursesModel
+@{
+    ViewData["Title"] = "Quantum Computing Curriculum";
+}
+
+<div class="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <!-- Page Header -->
+    <div class="mx-auto max-w-2xl lg:text-center mb-16">
+      <span class="inline-block text-xs font-bold tracking-widest text-pink-600 uppercase mb-3
+                   px-3 py-1 rounded-full bg-pink-50 border border-pink-100">ENT Academy</span>
+      <p class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Quantum Computing
+      </p>
+      <p class="mt-3 text-lg text-slate-400 font-light tracking-wide">
+        Comprehensive professional training curriculum in quantum software engineering
+      </p>
+      <p class="mt-8 text-base leading-8 text-slate-600 font-medium">
+        Develop the skills required to write quantum code and design variational algorithms. This course balances rigorous physics fundamentals with practical software engineering using IBM Qiskit and Google Cirq.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <div class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3">
+
+        <!-- Card 1 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-pink-500"></div>
+          <div class="p-8 flex-grow">
+            <span class="text-[10px] font-bold text-pink-500 uppercase tracking-widest block mb-2">Module 01</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition-colors">Foundations of Quantum Physics</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Understanding state vectors, superposition, entanglement, the Bloch sphere representation, and the mathematical framework of measurement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-pink-500"></div>
+          <div class="p-8 flex-grow">
+            <span class="text-[10px] font-bold text-pink-500 uppercase tracking-widest block mb-2">Module 02</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition-colors">Quantum Gates &amp; Circuits</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Designing circuits with single-qubit gates (Hadamard, Pauli X/Y/Z, Phase) and multi-qubit operations (CNOT, SWAP, Toffoli).
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-pink-500"></div>
+          <div class="p-8 flex-grow">
+            <span class="text-[10px] font-bold text-pink-500 uppercase tracking-widest block mb-2">Module 03</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition-colors">Programming with Qiskit</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Writing quantum code, compiling circuits, submitting jobs to IBM Quantum simulators, and analyzing measurement histograms.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-pink-500"></div>
+          <div class="p-8 flex-grow">
+            <span class="text-[10px] font-bold text-pink-500 uppercase tracking-widest block mb-2">Module 04</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition-colors">Core Quantum Algorithms</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Rigorous walkthroughs of Deutsch-Jozsa, Shor's period-finding and factoring algorithm, and Grover's search database algorithm.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-pink-500"></div>
+          <div class="p-8 flex-grow">
+            <span class="text-[10px] font-bold text-pink-500 uppercase tracking-widest block mb-2">Module 05</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition-colors">Variational &amp; Hybrid Optimization</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Practical implementations of VQE for chemical structures, QAOA for combinatorial optimization, and quantum error mitigation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-pink-500"></div>
+          <div class="p-8 flex-grow">
+            <span class="text-[10px] font-bold text-pink-500 uppercase tracking-widest block mb-2">Module 06</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition-colors">Quantum Machine Learning</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Quantum neural networks (QNN), variational classifiers, and quantum kernel estimation for high-dimensional data classification.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-20 text-center">
+      <a href="/Contact?subject=Enrollment%3A%20Quantum%20Computing%20Course" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors uppercase tracking-wide">
+        Enquire About Enrollment &rarr;
+      </a>
+    </div>
+
+  </div>
+</div>

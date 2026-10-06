@@ -1,0 +1,50 @@
+@page
+@model Ent.Web.Pages.Admin.Blog.CreateModel
+@{
+    ViewData["Title"] = "Create Blog Post";
+    Layout = "_AdminLayout";
+}
+
+<div class="max-w-2xl bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+    <form method="post">
+        <div class="space-y-6">
+            <div>
+                <label asp-for="BlogPost.Title" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                <input asp-for="BlogPost.Title" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" />
+                <span asp-validation-for="BlogPost.Title" class="text-red-500 text-xs"></span>
+            </div>
+            
+            <div>
+                <label asp-for="BlogPost.Category" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                <input asp-for="BlogPost.Category" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" />
+                <span asp-validation-for="BlogPost.Category" class="text-red-500 text-xs"></span>
+            </div>
+
+            <div>
+                <label asp-for="BlogPost.AuthorName" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                <input asp-for="BlogPost.AuthorName" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" />
+                <span asp-validation-for="BlogPost.AuthorName" class="text-red-500 text-xs"></span>
+            </div>
+
+            <div>
+                <label asp-for="BlogPost.Content" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                <textarea asp-for="BlogPost.Content" rows="10" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"></textarea>
+                <span asp-validation-for="BlogPost.Content" class="text-red-500 text-xs"></span>
+            </div>
+
+            <div class="flex items-center">
+                <input asp-for="BlogPost.IsPublished" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-600" />
+                <label asp-for="BlogPost.IsPublished" class="ml-2 block text-sm text-gray-900">Publish Immediately</label>
+            </div>
+        </div>
+
+        <div class="mt-6 flex items-center justify-end gap-x-6">
+            <a href="/Admin/Blog/Index" class="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-600">Cancel</a>
+            <button type="submit" class="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Save</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

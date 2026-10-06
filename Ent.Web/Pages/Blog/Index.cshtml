@@ -1,0 +1,62 @@
+@page
+@model Ent.Web.Pages.Blog.IndexModel
+@{
+    ViewData["Title"] = "Engineering Insights Blog";
+}
+
+<div class="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Engineering Insights</h2>
+      <p class="mt-4 text-lg leading-8 text-slate-600 font-medium">Expert perspectives on AI, quantum computing, and the future of industrial engineering.</p>
+    </div>
+    
+    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        @if (Model.BlogPosts != null && Model.BlogPosts.Any())
+        {
+            foreach (var post in Model.BlogPosts)
+            {
+                <article class="flex max-w-xl flex-col items-start justify-between bg-white p-8 rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all group">
+                    <div class="flex items-center gap-x-4 text-xs">
+                        <time datetime="@post.PublishedDate.ToString("yyyy-MM-dd")" class="text-slate-500 font-medium">@post.PublishedDate.ToString("MMM dd, yyyy")</time>
+                        @if (!post.IsPublished)
+                        {
+                            <span class="relative z-10 rounded-full bg-slate-100 px-3 py-1.5 font-medium text-slate-600">Draft</span>
+                        }
+                    </div>
+                    <div class="group relative mt-4">
+                        <h3 class="mt-3 text-lg font-bold leading-6 text-slate-900 group-hover:text-slate-600 transition-colors">
+                            <a asp-page="./Post" asp-route-id="@post.Id">
+                                <span class="absolute inset-0"></span>
+                                @post.Title
+                            </a>
+                        </h3>
+                        <p class="mt-5 line-clamp-3 text-sm leading-6 text-slate-600">
+                            @post.Content
+                        </p>
+                    </div>
+                    <div class="relative mt-8 flex items-center gap-x-4">
+                        <div class="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold text-sm">
+                            @(!string.IsNullOrEmpty(post.AuthorName) ? post.AuthorName.Substring(0, 1).ToUpper() : "E")
+                        </div>
+                        <div class="text-sm leading-6">
+                            <p class="font-bold text-slate-900">
+                                <a>
+                                    <span class="absolute inset-0"></span>
+                                    @post.AuthorName
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            }
+        }
+        else
+        {
+            <div class="col-span-full py-12 text-center text-slate-500 font-medium">
+                There is no blog to view
+            </div>
+        }
+    </div>
+  </div>
+</div>

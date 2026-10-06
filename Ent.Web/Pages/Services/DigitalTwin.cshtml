@@ -1,0 +1,136 @@
+@page
+@model Ent.Web.Pages.Services.DigitalTwinModel
+@{
+    ViewData["Title"] = "Digital Twin Technology";
+}
+
+<div class="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <!-- Page Header -->
+    <div class="mx-auto max-w-2xl lg:text-center mb-16">
+      <span class="inline-block text-xs font-bold tracking-widest text-cyan-600 uppercase mb-3
+                   px-3 py-1 rounded-full bg-cyan-50 border border-cyan-100">Services</span>
+      <p class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        Digital Twin Technology
+      </p>
+      <p class="mt-3 text-lg text-slate-400 font-light tracking-wide">
+        Connecting physical assets with real-time digital replicas
+      </p>
+      <p class="mt-8 text-base leading-8 text-slate-600 font-medium">
+        We build high-performance digital twins that integrate real-time sensor data with physics-based simulations. This allows operators to visualize asset status, run what-if scenarios, and predict maintenance needs before failures occur.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <div class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3">
+
+        <!-- Card 1 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Real-Time Asset Monitoring</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Live telemetry pipelines connecting physical sensors to cloud-hosted 3D dashboards for continuous spatial health monitoring.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 11.517 1.294l-.041-.02m-5.462.262l.04-.02a.75.75 0 11.518 1.294l-.04-.02m10.428-9.39a9.76 9.76 0 00-11.218 0l-.13.09a4.5 4.5 0 001.41 8.243 9.776 9.776 0 0011.218 0l.13-.09a4.5 4.5 0 00-1.41-8.243z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Predictive Diagnostics</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Machine learning anomaly-detection algorithms that identify operational deviations and predict remaining useful life (RUL) of components.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622a4.5 4.5 0 01-1.242-7.244l4.5-4.5a4.5 4.5 0 016.364 6.364l-1.757 1.757" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">IoT Data Fusion</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Unifying legacy factory SCADA systems, modern sensor streams, and 3D CAD geometry into a single, unified database schema.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Process Simulation</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Simulating assembly lines and plant floor flows. Identifying bottlenecks, queue times, and structural throughput optimizations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.438 4.438 0 002.946-2.946 4.5 4.5 0 004.306-1.758q.225-.365.4-.757a14.91 14.91 0 00-2.146-2.146c-.285.13-.56.28-.822.449z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Virtual Commissioning</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Testing programmable logic controller (PLC) code against virtual physical mockups before physical deployment, saving installation time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="flex flex-col bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-slate-300 transition-all group">
+          <div class="h-1 w-full bg-cyan-500"></div>
+          <div class="p-8 flex-grow">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+              <svg class="h-5 w-5 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">Lifecycle Asset Management</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">
+              Consolidating spatial assembly manuals, historical maintenance logs, and telemetry profiles into a single digital logbook.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-20 text-center">
+      <a href="/Contact?subject=Digital%20Twin%20Inquiry" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors uppercase tracking-wide">
+        Start Your Project &rarr;
+      </a>
+    </div>
+
+  </div>
+</div>

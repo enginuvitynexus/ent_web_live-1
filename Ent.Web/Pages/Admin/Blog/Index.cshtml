@@ -1,0 +1,44 @@
+@page
+@model Ent.Web.Pages.Admin.Blog.IndexModel
+@{
+    ViewData["Title"] = "Blog Post Admin";
+    Layout = "_AdminLayout";
+}
+
+<div class="sm:flex sm:items-center mb-8">
+  <div class="sm:flex-auto">
+    <p class="mt-2 text-sm text-gray-700">Manage all blog posts on the public portal.</p>
+  </div>
+  <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
+    <a href="/Admin/Blog/Create" class="block rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500">Add Post</a>
+  </div>
+</div>
+
+<div class="bg-white shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
+    <table class="min-w-full divide-y divide-gray-300">
+        <thead class="bg-gray-50">
+            <tr>
+                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Title</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Category</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Published</th>
+                <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                    <span class="sr-only">Edit</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+            @foreach(var post in Model.BlogPosts)
+            {
+                <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900">@post.Title</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">@post.Category</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">@(post.IsPublished ? "Yes" : "No")</td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                        <a href="/Admin/Blog/Edit?id=@post.Id" class="text-blue-600 hover:text-blue-900 mr-4">Edit</a>
+                        <a href="/Admin/Blog/Delete?id=@post.Id" class="text-red-600 hover:text-red-900">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

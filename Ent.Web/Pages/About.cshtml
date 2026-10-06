@@ -1,0 +1,67 @@
+@page
+@model Ent.Web.Pages.AboutModel
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<div class="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32 relative overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+    <div class="mx-auto max-w-2xl lg:text-center mb-24">
+      <h2 class="text-xs font-bold tracking-widest text-slate-400 uppercase">About Us</h2>
+      <p class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Pioneering the future of <br/><span class="text-slate-400 font-light">engineering and technology</span></p>
+      <p class="mt-8 text-lg leading-8 text-slate-600 font-medium">
+        Enginuvity Nexus Technologies stands at the forefront of technological innovation, combining deep engineering expertise with cutting-edge advancements in artificial intelligence and quantum computing.
+      </p>
+    </div>
+    
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <!-- Our Vision -->
+        <div class="flex flex-col bg-white p-10 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300">
+          <dt class="flex items-center gap-x-4 text-lg font-bold leading-7 text-slate-900 uppercase tracking-wide">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-100">
+              <svg class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </span>
+            Our Vision
+          </dt>
+          <dd class="mt-6 flex flex-auto flex-col text-base leading-relaxed text-slate-600">
+            <p class="flex-auto">To be the global leader in engineering innovation, driving the transformation of industries through the integration of AI, quantum computing, and advanced engineering solutions.</p>
+          </dd>
+        </div>
+        
+        <!-- Our Mission -->
+        <div class="flex flex-col bg-white p-10 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300">
+          <dt class="flex items-center gap-x-4 text-lg font-bold leading-7 text-slate-900 uppercase tracking-wide">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-100">
+              <svg class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </span>
+            Our Mission
+          </dt>
+          <dd class="mt-6 flex flex-auto flex-col text-base leading-relaxed text-slate-600">
+            <p class="flex-auto">Empowering organizations with intelligent engineering solutions that solve complex challenges, accelerate innovation, and create sustainable competitive advantages.</p>
+          </dd>
+        </div>
+
+        <!-- Our Expertise -->
+        <div class="flex flex-col bg-white p-10 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300">
+          <dt class="flex items-center gap-x-4 text-lg font-bold leading-7 text-slate-900 uppercase tracking-wide">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm border border-slate-100">
+              <svg class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.438 4.438 0 002.946-2.946 4.5 4.5 0 004.306-1.758q.225-.365.4-.757a14.91 14.91 0 00-2.146-2.146c-.285.13-.56.28-.822.449z" />
+              </svg>
+            </span>
+            Our Expertise
+          </dt>
+          <dd class="mt-6 flex flex-auto flex-col text-base leading-relaxed text-slate-600">
+            <p class="flex-auto">A multidisciplinary team of engineers, data scientists, and quantum computing specialists dedicated to pushing the boundaries of what's possible in technology and engineering.</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>

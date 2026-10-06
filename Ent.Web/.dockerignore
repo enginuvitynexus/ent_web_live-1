@@ -1,0 +1,9 @@
+.vs/
+bin/
+obj/
+node_modules/
+out/
+Dockerfile
+.git/
+.github/
+*.user

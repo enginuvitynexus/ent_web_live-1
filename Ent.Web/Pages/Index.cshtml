@@ -1,0 +1,231 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Where engineering meets ingenuvity";
+}
+
+<!-- ============================================================
+     HERO — Particle Network Canvas (Homepage Only)
+============================================================ -->
+<div class="relative overflow-hidden bg-white border-b border-slate-100" style="min-height:88vh;">
+
+    <!-- Canvas fills the entire hero, sits behind all content -->
+    <canvas id="hero-canvas"
+            class="absolute inset-0 w-full h-full"
+            style="z-index:0; pointer-events:none;"></canvas>
+
+    <!-- Subtle white vignette so edges fade cleanly -->
+    <div class="absolute inset-0 pointer-events-none" style="z-index:1;
+        background: radial-gradient(ellipse at center,
+            transparent 40%,
+            rgba(255,255,255,0.65) 100%);"></div>
+
+    <!-- Hero content, sits above canvas -->
+    <div class="relative flex items-center justify-center min-h-[88vh] px-6 lg:px-8" style="z-index:2;">
+        <div class="mx-auto max-w-4xl text-center">
+
+            <!-- Eyebrow label -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-50 border border-violet-100 mb-8">
+                <span class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
+                <span class="text-xs font-bold text-violet-600 uppercase tracking-widest">Enginuvity Nexus Technologies</span>
+            </div>
+
+            <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-7xl mb-6 leading-tight">
+                Engineering Intelligence
+                <span class="block font-light text-slate-400">for the Future</span>
+            </h1>
+
+            <p class="mt-6 text-xl leading-8 text-slate-500 font-medium tracking-wide max-w-2xl mx-auto">
+                Redefining Engineering Innovation: Shaping Tomorrow.
+            </p>
+
+            <div class="mt-12 flex items-center justify-center gap-x-6 flex-wrap gap-y-4">
+                <a href="/Services"
+                   class="rounded-lg px-8 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-violet-200"
+                   style="background:linear-gradient(135deg,#7c3aed 0%,#06b6d4 100%);">
+                    Our Services
+                </a>
+                <a href="/Contact"
+                   class="text-sm font-bold leading-6 text-slate-600 hover:text-violet-600 transition-colors uppercase tracking-wider flex items-center gap-1">
+                    Contact Us
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Scroll hint -->
+            <div class="mt-20 flex justify-center">
+                <div class="flex flex-col items-center gap-1 text-slate-300 animate-bounce">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     PARTICLE NETWORK — Homepage Only
+     Copied & adapted from legacy PHP animations.js (#hero-canvas)
+     Palette updated: violet/cyan particles on white canvas
+============================================================ -->
+@section Scripts {
+<script>
+(function () {
+    'use strict';
+
+    window.addEventListener('load', function () {
+        const canvas = document.getElementById('hero-canvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+        let animId;
+
+        // ── Config (mirrored from PHP original) ──
+        const PARTICLE_COUNT    = 70;
+        const CONNECT_DISTANCE  = 140;   // particle ↔ particle
+        const MOUSE_DISTANCE    = 200;   // particle ↔ mouse
+        const PARTICLE_SPEED    = 0.45;
+
+        // Light-theme palette derived from ENT logo gradient
+        const PARTICLE_COLORS = [
+            '#7c3aed',   // violet
+            '#06b6d4',   // cyan
+            '#db2777',   // magenta
+            '#a855f7',   // purple mid
+            '#0ea5e9',   // sky blue
+        ];
+
+        // Mouse state (relative to canvas)
+        const mouse = { x: null, y: null };
+
+        canvas.addEventListener('mousemove', e => {
+            const r = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - r.left;
+            mouse.y = e.clientY - r.top;
+        });
+        canvas.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        // Also track from window so full-canvas coverage
+        window.addEventListener('mousemove', e => {
+            const r = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - r.left;
+            mouse.y = e.clientY - r.top;
+        });
+        window.addEventListener('mouseleave', () => {
+            mouse.x = null; mouse.y = null;
+        });
+
+        // ── Resize ──
+        function resize() {
+            width  = canvas.width  = canvas.offsetWidth;
+            height = canvas.height = canvas.offsetHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        // ── Particle class ──
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x     = Math.random() * width;
+                this.y     = Math.random() * height;
+                this.vx    = (Math.random() - 0.5) * PARTICLE_SPEED;
+                this.vy    = (Math.random() - 0.5) * PARTICLE_SPEED;
+                this.size  = Math.random() * 2 + 1;
+                this.color = PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)];
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                // Bounce off edges
+                if (this.x < 0 || this.x > width)  this.vx *= -1;
+                if (this.y < 0 || this.y > height)  this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = 0.75;
+                ctx.fill();
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        // ── Init ──
+        function init() {
+            particles = [];
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                particles.push(new Particle());
+            }
+        }
+        init();
+
+        // ── Animation loop ──
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            particles.forEach((p, idx) => {
+                p.update();
+                p.draw();
+
+                // ── Particle ↔ Particle connections ──
+                for (let j = idx + 1; j < particles.length; j++) {
+                    const q    = particles[j];
+                    const dx   = p.x - q.x;
+                    const dy   = p.y - q.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < CONNECT_DISTANCE) {
+                        const alpha = (1 - dist / CONNECT_DISTANCE) * 0.35;
+                        ctx.beginPath();
+                        // Gradient line: blend both particle colours
+                        const grad = ctx.createLinearGradient(p.x, p.y, q.x, q.y);
+                        grad.addColorStop(0, p.color);
+                        grad.addColorStop(1, q.color);
+                        ctx.strokeStyle = grad;
+                        ctx.globalAlpha = alpha;
+                        ctx.lineWidth   = 0.8;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(q.x, q.y);
+                        ctx.stroke();
+                        ctx.globalAlpha = 1;
+                    }
+                }
+
+                // ── Particle ↔ Mouse connections ──
+                if (mouse.x !== null) {
+                    const dx   = p.x - mouse.x;
+                    const dy   = p.y - mouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < MOUSE_DISTANCE) {
+                        const alpha = (1 - dist / MOUSE_DISTANCE) * 0.65;
+                        ctx.beginPath();
+                        // Cyan lines toward mouse — vivid highlight
+                        ctx.strokeStyle = '#7c3aed';
+                        ctx.globalAlpha = alpha;
+                        ctx.lineWidth   = 1.2;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.stroke();
+                        ctx.globalAlpha = 1;
+                    }
+                }
+            });
+
+            animId = requestAnimationFrame(animate);
+        }
+        animate();
+    });
+})();
+</script>
+}
