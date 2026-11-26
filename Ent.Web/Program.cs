@@ -5,7 +5,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+// Vercel passes a dynamic $PORT environment variable to containers.
+// Read it at startup and override ASPNETCORE_URLS so Kestrel binds correctly.
+// Falls back to 8080 for local Docker / OVH / any other platform.
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseUrls($"http://+:{port}");
 
 // Add Health Checks for Cloud Run probes
 builder.Services.AddHealthChecks();
