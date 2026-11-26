@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 // Read it at startup and override ASPNETCORE_URLS so Kestrel binds correctly.
 // Falls back to 8080 for local Docker / OVH / any other platform.
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+Environment.SetEnvironmentVariable("ASPNETCORE_URLS", $"http://+:{port}");
+
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls($"http://+:{port}");
 
@@ -17,8 +19,9 @@ builder.Services.AddHealthChecks();
 
 // Add services to the container.
 // Connection string is overridden at runtime via environment variable:
-// ConnectionStrings__DefaultConnection (set by Cloud Run from Secret Manager)
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+// ConnectionStrings__DefaultConnection
+var rawConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = NormalizePostgresConnectionString(rawConnectionString);
 if (!string.IsNullOrEmpty(connectionString))
 {
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -112,3 +115,34 @@ app.MapRazorPages()
    .WithStaticAssets();
 
 app.Run();
+
+static string? NormalizePostgresConnectionString(string? conn)
+{
+    if (string.IsNullOrWhiteSpace(conn))
+        return conn;
+
+    if (!conn.StartsWith("postgres://", StringComparison.OrdinalIgnoreCase) &&
+        !conn.StartsWith("postgresql://", StringComparison.OrdinalIgnoreCase))
+    {
+        return conn;
+    }
+
+    var uri = new Uri(conn);
+    var userInfo = uri.UserInfo.Split(':', 2);
+    var username = Uri.UnescapeDataString(userInfo[0]);
+    var password = userInfo.Length > 1 ? Uri.UnescapeDataString(userInfo[1]) : string.Empty;
+    var database = uri.AbsolutePath.TrimStart('/');
+    var dbPort = uri.Port > 0 ? uri.Port : 5432;
+
+    var builder = new Npgsql.NpgsqlConnectionStringBuilder
+    {
+        Host = uri.Host,
+        Port = dbPort,
+        Database = database,
+        Username = username,
+        Password = password,
+        SslMode = Npgsql.SslMode.Require
+    };
+
+    return builder.ConnectionString;
+}
