@@ -1,9 +1,7 @@
-name: Deploy Ent.Web to OVH VPS
+name: Deploy Ent.Web to OVH VPS (Disabled - Manual Only)
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 concurrency:
   group: deploy-vps-main
